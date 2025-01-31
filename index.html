@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Movie shop</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="container">
-            <h2>Add a movie</h2>
-            <p>Add your favorite movie.</p>
-            <form action="" data-cy="movie-form">
-                <input type="text" placeholder="Movie name" data-cy="movie-name-input">
-                <input type="button" value="Add Movie" data-cy="add-movie-btn">
-            </form>
+      <div class="container">
+        <!-- Add movie -->
+        <div class="add-movies">
+          <h2 data-cy="add-movie-title">Add a movie</h2>
+          <p>Add your favorite movie.</p>
+          <form action="" data-cy="movie-form">
+            <input
+              type="text"
+              placeholder="Movie name"
+              data-cy="movie-name-input"
+            />
+            <input type="button" id="add-movie-btn" value="Add Movie" data-cy="add-movie-btn" />
+          </form>
         </div>
+
+        <!-- load movies -->
+        <div class="load-movies">
+            <h2>Movie list</h2>
+            <button type="button" id="load-movies-btn" data-cy="load-movie-btn">Load Movies</button>
+            <ul id="movie-list"></ul>
+        </div>
+      </div>
     </div>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
